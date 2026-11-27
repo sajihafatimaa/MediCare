@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div class="login-page">
+  <div class="brand">
+    <span class="circle one"></span><span class="circle two"></span>
+    <a class="logo" href="../index.html"><img src="../images/logo.svg" alt="">MediCare</a>
+    <div>
+      <h1>Care, organised.</h1>
+      <p>Sign in to manage the whole hospital from one calm, simple workspace.</p>
+      <ul>
+        <li class="c-blue">Patients, appointments and rooms</li>
+        <li class="c-teal">Doctors, prescriptions and medicines</li>
+        <li class="c-orange">Bills, payments and cashiers</li>
+        <li class="c-purple">Staff and administrators</li>
+      </ul>
+    </div>
+    <a class="back" href="../index.html">&lsaquo; Back to home</a>
+  </div>
+
+  <div class="side">
+    <form class="card login-card" action="login.html#created">
+      <h2>Create account</h2>
+      <p class="sub">Register a new admin account</p>
+      <label class="field">Full name <input type="text" required placeholder="Sara Ahmed"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <label class="field">Username <input type="text" required placeholder="admin.sara"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <label class="field">Email <input type="email" required placeholder="sara@medicare.example"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <label class="field">Phone <input type="tel" required placeholder="+92 300 0000000"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <label class="field">Password (8 characters or more) <input type="password" required minlength="8" autocomplete="new-password"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <label class="field">Confirm password <input type="password" required minlength="8" autocomplete="new-password"><span class="error-text">Please fill in this field correctly</span></label>
+
+      <button class="btn btn-block" type="submit">Create account</button>
+      <div class="secure"><p>Already have an account? <a href="login.html"><b>Log in</b></a></p></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

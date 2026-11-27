@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book appointment | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+<div class="utility">
+  <div class="wrap"><span>Emergency: +92 300 0000100 &nbsp; | &nbsp; Open 24 hours</span><span>OPD: Mon-Sat 08:00 - 20:00</span></div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><img src="../images/logo.svg" alt="">MediCare</a>
+    <nav class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#departments">Departments</a>
+      <a href="our-doctors.html">Doctors</a>
+      <a href="book-appointment.html" class="active">Appointments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-buttons">
+      <a class="btn btn-outline" href="doctor-login.html">Doctor login</a>
+      <a class="btn" href="book-appointment.html">Book appointment</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap page"><div class="narrow">
+  <h1>Book an appointment</h1>
+  <p>Choose a doctor, then pick a time. If it is free, enter your details to finish.</p>
+
+  <div class="card flow" id="slots">
+    <h3>1. Choose a doctor</h3>
+    <input type="radio" name="doc" id="d1" class="dr" form="book" value="Dr. Imran Qureshi"><label class="doc" for="d1">Dr. Imran Qureshi<small>Cardiology</small></label>
+    <input type="radio" name="doc" id="d2" class="dr" form="book" value="Dr. Farah Siddiqui"><label class="doc" for="d2">Dr. Farah Siddiqui<small>Neurology</small></label>
+    <input type="radio" name="doc" id="d3" class="dr" form="book" value="Dr. Bilal Ahmed"><label class="doc" for="d3">Dr. Bilal Ahmed<small>Pediatrics</small></label>
+    <input type="radio" name="doc" id="d4" class="dr" form="book" value="Dr. Sana Malik"><label class="doc" for="d4">Dr. Sana Malik<small>Orthopedics</small></label>
+
+    <h3 class="slot-title">2. Choose a time</h3>
+
+    <!-- Dr. Imran. avail = free, taken = booked. Change class + small text to edit a slot. -->
+    <input type="radio" name="slot" id="imran-0900" class="imran avail" form="book" value="09:00"><label class="slot imran" for="imran-0900">09:00<small>Available</small></label>
+    <input type="radio" name="slot" id="imran-1100" class="imran taken" form="book" value="11:00"><label class="slot imran" for="imran-1100">11:00<small>Booked</small></label>
+    <input type="radio" name="slot" id="imran-1430" class="imran avail" form="book" value="14:30"><label class="slot imran" for="imran-1430">14:30<small>Available</small></label>
+    <input type="radio" name="slot" id="imran-1600" class="imran taken" form="book" value="16:00"><label class="slot imran" for="imran-1600">16:00<small>Booked</small></label>
+
+    <!-- Dr. Farah -->
+    <input type="radio" name="slot" id="farah-0900" class="farah taken" form="book" value="09:00"><label class="slot farah" for="farah-0900">09:00<small>Booked</small></label>
+    <input type="radio" name="slot" id="farah-1100" class="farah avail" form="book" value="11:00"><label class="slot farah" for="farah-1100">11:00<small>Available</small></label>
+    <input type="radio" name="slot" id="farah-1430" class="farah avail" form="book" value="14:30"><label class="slot farah" for="farah-1430">14:30<small>Available</small></label>
+    <input type="radio" name="slot" id="farah-1600" class="farah avail" form="book" value="16:00"><label class="slot farah" for="farah-1600">16:00<small>Available</small></label>
+
+    <!-- Dr. Bilal -->
+    <input type="radio" name="slot" id="bilal-0900" class="bilal avail" form="book" value="09:00"><label class="slot bilal" for="bilal-0900">09:00<small>Available</small></label>
+    <input type="radio" name="slot" id="bilal-1100" class="bilal avail" form="book" value="11:00"><label class="slot bilal" for="bilal-1100">11:00<small>Available</small></label>
+    <input type="radio" name="slot" id="bilal-1430" class="bilal taken" form="book" value="14:30"><label class="slot bilal" for="bilal-1430">14:30<small>Booked</small></label>
+    <input type="radio" name="slot" id="bilal-1600" class="bilal taken" form="book" value="16:00"><label class="slot bilal" for="bilal-1600">16:00<small>Booked</small></label>
+
+    <!-- Dr. Sana -->
+    <input type="radio" name="slot" id="sana-0900" class="sana taken" form="book" value="09:00"><label class="slot sana" for="sana-0900">09:00<small>Booked</small></label>
+    <input type="radio" name="slot" id="sana-1100" class="sana taken" form="book" value="11:00"><label class="slot sana" for="sana-1100">11:00<small>Booked</small></label>
+    <input type="radio" name="slot" id="sana-1430" class="sana avail" form="book" value="14:30"><label class="slot sana" for="sana-1430">14:30<small>Available</small></label>
+    <input type="radio" name="slot" id="sana-1600" class="sana avail" form="book" value="16:00"><label class="slot sana" for="sana-1600">16:00<small>Available</small></label>
+
+    <!-- Shown when a booked slot is picked -->
+    <div class="not-done">
+      <h3>Appointment not done</h3>
+      <p>Sorry, this time is not available. Please choose another time.</p>
+    </div>
+
+    <!-- Shown when a free slot is picked -->
+    <form class="details" id="book" action="#done">
+      <p class="ok-text">This time is available. Enter your details.</p>
+      <div class="two">
+        <label class="field">Your name <input type="text" name="name" required><span class="error-text">Please fill in this field correctly</span></label>
+
+        <label class="field">Phone <input type="tel" name="phone" required><span class="error-text">Please fill in this field correctly</span></label>
+
+        <label class="field">Department <select name="department" required><option selected>Cardiology</option><option>Neurology</option><option>Pediatrics</option><option>Orthopedics</option></select><span class="error-text">Please fill in this field correctly</span></label>
+
+        <label class="field">Date <input type="date" name="date" required min="2026-11-27"><span class="error-text">Please fill in this field correctly</span></label>
+      </div>
+      <button class="btn btn-block" type="submit">Confirm appointment</button>
+    </form>
+  </div>
+</div></div>
+
+<!-- Final message -->
+<div class="modal" id="done">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <h2>Appointment done</h2>
+    <p>Your appointment has been booked. Thank you.</p>
+    <div class="modal-actions"><a class="btn" href="../index.html">Home</a></div>
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <div class="logo"><img src="../images/logo.svg" alt="">MediCare</div>
+      <p>Modern hospital care, organised.</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#departments">Departments</a></li>
+        <li><a href="our-doctors.html">Doctors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Patients</h4>
+      <ul>
+        <li><a href="book-appointment.html">Book appointment</a></li>
+        <li><a href="#contact">Billing help</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+923000000100">+92 300 0000100</a></li>
+        <li><a href="mailto:care@medicare.example">care@medicare.example</a></li>
+        <li>Jail Road, Lahore</li>
+      </ul>
+    </div>
+    <p class="copy">Copyright 2026 MediCare. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
