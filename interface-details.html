@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interface details | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Interface details</h1><p>Small touches that make MediCare feel polished</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="showcase">
+      <div>
+        <div class="card"><h2>Buttons</h2>
+          <div class="buttons">
+            <button class="btn">Save</button><button class="btn" disabled>Save</button>
+            <button class="btn btn-danger">Delete</button><button class="btn btn-outline">Outline</button>
+          </div>
+          <p class="note">Soft shadow appears on hover, press moves down 1 px.</p>
+        </div>
+        <div class="card"><h2>Form states</h2>
+          <div class="states">
+            <label class="field">Default <input value="Ayesha Khan"></label>
+            <label class="field">Focus (click me) <input value="Ayesha Khan"></label>
+            <label class="field">Error <input class="is-error"><span class="error-text" style="display:block">This field is required</span></label>
+            <label class="field">Success <input class="is-success" value="+92 300 0000101 &#10003;"></label>
+          </div>
+        </div>
+        <div class="card"><h2>Notifications</h2>
+          <div class="toast sample c-green"><strong>Payment received</strong><span>PM-804 saved for bill B-501</span></div>
+          <div class="toast sample c-red"><strong>Room 201 is occupied</strong><span>Choose another room</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="card"><h2>Confirm before deleting</h2>
+          <a class="btn btn-danger" href="#sample-delete">Delete patient P-1003</a>
+        </div>
+        <div class="card empty"><h2>Empty state</h2>
+          <img src="../images/empty.svg" alt="">
+          <h3>No appointments yet</h3>
+          <p>Book the first appointment for this patient.</p>
+          <a class="btn" href="appointments.html">+ Book now</a>
+        </div>
+        <div class="card"><h2>Loading, tooltips and paging</h2>
+          <div class="skeleton"></div><div class="skeleton" style="width:80%"></div><div class="skeleton" style="width:90%"></div>
+          <p><a class="act" href="#_" data-tip="Copy patient ID">Hover me</a> <span class="pill c-orange">Pending</span> <span class="pill c-green">Paid</span> Counts <span class="count">3</span></p>
+          <div class="pages"><span>&lsaquo;</span><span class="current">1</span><span>2</span><span>3</span><span>&rsaquo;</span></div>
+        </div>
+      </div>
+    </div>
+<div class="modal" id="sample-delete">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1003 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="toast c-green" id="deleted" role="status"><strong>Delete confirmed</strong><span>Nothing was removed.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicines | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal active" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Medicines</h1><p>Clinical / Medicines</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="head end c-teal"><a class="btn" href="#add-medicine">+ Add Medicine</a></div>
+    <div class="card">
+      <div class="table-wrap c-teal">
+        <table>
+          <thead><tr><th>Medicine</th><th>Price</th><th>Stock</th><th>Expiry</th><th>Actions</th></tr></thead>
+          <tbody>
+          <tr><td class="id">Amoxicillin</td><td>Rs 45</td><td>320</td><td>2027-06</td><td><a class="act" href="#edit-medicine-0" data-tip="Edit medicine">Edit</a><a class="act del" href="#del-medicine-0" data-tip="Delete medicine">Delete</a></td></tr>
+          <tr><td class="id">Paracetamol</td><td>Rs 12</td><td>850</td><td>2027-09</td><td><a class="act" href="#edit-medicine-1" data-tip="Edit medicine">Edit</a><a class="act del" href="#del-medicine-1" data-tip="Delete medicine">Delete</a></td></tr>
+          <tr><td class="id">Vitamin D3</td><td>Rs 31</td><td>410</td><td>2028-01</td><td><a class="act" href="#edit-medicine-2" data-tip="Edit medicine">Edit</a><a class="act del" href="#del-medicine-2" data-tip="Delete medicine">Delete</a></td></tr>
+          <tr><td class="id">Ibuprofen</td><td>Rs 24</td><td>55</td><td>2027-03</td><td><a class="act" href="#edit-medicine-3" data-tip="Edit medicine">Edit</a><a class="act del" href="#del-medicine-3" data-tip="Delete medicine">Delete</a></td></tr>
+          <tr><td class="id">Cetirizine</td><td>Rs 28</td><td>190</td><td>2027-11</td><td><a class="act" href="#edit-medicine-4" data-tip="Edit medicine">Edit</a><a class="act del" href="#del-medicine-4" data-tip="Delete medicine">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="modal c-teal" id="add-medicine">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Add medicine</h2>
+    <form action="#saved">
+<label class="field">Medicine name <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Price <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-medicine-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit Amoxicillin</h2>
+    <form action="#saved">
+<label class="field">Price <input type="text" value="Rs 45" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" value="320" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" value="2027-06" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-medicine-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this medicine?</h2>
+    <p>Amoxicillin will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-medicine-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit Paracetamol</h2>
+    <form action="#saved">
+<label class="field">Price <input type="text" value="Rs 12" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" value="850" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" value="2027-09" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-medicine-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this medicine?</h2>
+    <p>Paracetamol will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-medicine-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit Vitamin D3</h2>
+    <form action="#saved">
+<label class="field">Price <input type="text" value="Rs 31" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" value="410" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" value="2028-01" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-medicine-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this medicine?</h2>
+    <p>Vitamin D3 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-medicine-3">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit Ibuprofen</h2>
+    <form action="#saved">
+<label class="field">Price <input type="text" value="Rs 24" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" value="55" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" value="2027-03" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-medicine-3">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this medicine?</h2>
+    <p>Ibuprofen will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-medicine-4">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit Cetirizine</h2>
+    <form action="#saved">
+<label class="field">Price <input type="text" value="Rs 28" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Stock <input type="text" value="190" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Expiry <input type="text" value="2027-11" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-medicine-4">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this medicine?</h2>
+    <p>Cetirizine will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="toast c-green" id="deleted" role="status"><strong>Delete confirmed</strong><span>The record list has not changed.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>
