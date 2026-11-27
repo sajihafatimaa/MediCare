@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Good morning, Sara</h1><p>Friday, 27 November 2026 - here is today at MediCare</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="cards">
+<a class="card metric c-blue" href="patients.html"><span>Patients</span><strong>1,284</strong><small class="up">+4.2% this week</small></a>
+<a class="card metric c-blue" href="appointments.html"><span>Appointments today</span><strong>36</strong><small class="up">+6 vs yesterday</small></a>
+<a class="card metric c-teal" href="doctors.html"><span>Doctors</span><strong>48</strong><small class="">2 on leave</small></a>
+<a class="card metric c-orange" href="payments.html"><span>Revenue today</span><strong>Rs 1,248,000</strong><small class="up">+8.1% vs last week</small></a>
+<a class="card metric c-purple" href="staff.html"><span>Staff</span><strong>112</strong><small class="">1 new this month</small></a>
+</div>
+    <div class="dash">
+      <div class="card"><h2>Appointments this week</h2><div class="chart">
+<div>28<i style="height:179px"></i><span>Mon</span></div>
+<div>35<i style="height:224px"></i><span>Tue</span></div>
+<div>31<i style="height:198px"></i><span>Wed</span></div>
+<div class="top">40<i style="height:256px"></i><span>Thu</span></div>
+<div>36<i style="height:230px"></i><span>Fri</span></div>
+<div>18<i style="height:115px"></i><span>Sat</span></div>
+<div>9<i style="height:58px"></i><span>Sun</span></div>
+</div></div>
+      <div class="card"><h2>Room availability</h2>
+<div class="avail c-green"><div><span>Available</span><strong>18</strong></div><div class="bar"><i style="width:40%"></i></div></div>
+<div class="avail c-red"><div><span>Occupied</span><strong>27</strong></div><div class="bar"><i style="width:60%"></i></div></div>
+<div class="avail c-blue"><div><span>Total rooms</span><strong>45</strong></div><div class="bar"><i style="width:100%"></i></div></div>
+</div>
+    </div>
+    <div class="card"><h2>Upcoming appointments</h2>
+      <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>Patient</th><th>Doctor</th><th>Time</th><th>Status</th></tr></thead>
+          <tbody>
+          <tr><td class="id">Ayesha Khan</td><td>Dr. Imran Qureshi</td><td>09:00</td><td><span class="pill c-blue">Scheduled</span></td></tr>
+          <tr><td class="id">Daniyal Butt</td><td>Dr. Farah Siddiqui</td><td>09:30</td><td><span class="pill c-blue">Scheduled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooms | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue active" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Rooms</h1><p>Patient Care / Rooms</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="head end"><a class="btn" href="#add-room">+ Add Room</a></div>
+    <div class="rooms">
+      <div class="card"><h3>Room 101</h3><p>General</p><span class="pill c-red">Occupied</span></div>
+      <div class="card"><h3>Room 102</h3><p>General</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 103</h3><p>Private</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 201</h3><p>ICU</p><span class="pill c-red">Occupied</span></div>
+      <div class="card"><h3>Room 202</h3><p>ICU</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 301</h3><p>Private</p><span class="pill c-green">Available</span></div>
+    </div>
+    <div class="head"><h2>Room list</h2></div>
+    <div class="card">
+      <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>Room</th><th>Type</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+          <tr><td class="id">101</td><td>General</td><td><span class="pill c-red">Occupied</span></td><td><a class="act" href="#edit-room-0" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-0" data-tip="Delete room">Delete</a></td></tr>
+          <tr><td class="id">102</td><td>General</td><td><span class="pill c-green">Available</span></td><td><a class="act" href="#edit-room-1" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-1" data-tip="Delete room">Delete</a></td></tr>
+          <tr><td class="id">103</td><td>Private</td><td><span class="pill c-green">Available</span></td><td><a class="act" href="#edit-room-2" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-2" data-tip="Delete room">Delete</a></td></tr>
+          <tr><td class="id">201</td><td>ICU</td><td><span class="pill c-red">Occupied</span></td><td><a class="act" href="#edit-room-3" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-3" data-tip="Delete room">Delete</a></td></tr>
+          <tr><td class="id">202</td><td>ICU</td><td><span class="pill c-green">Available</span></td><td><a class="act" href="#edit-room-4" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-4" data-tip="Delete room">Delete</a></td></tr>
+          <tr><td class="id">301</td><td>Private</td><td><span class="pill c-green">Available</span></td><td><a class="act" href="#edit-room-5" data-tip="Edit room">Edit</a><a class="act del" href="#del-room-5" data-tip="Delete room">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="modal c-blue" id="add-room">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Add room</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option value="">Choose...</option><option>General</option><option>Private</option><option>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option value="">Choose...</option><option>Available</option><option>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 101</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option selected>General</option><option>Private</option><option>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option>Available</option><option selected>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>101 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 102</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option selected>General</option><option>Private</option><option>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option selected>Available</option><option>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>102 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 103</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option>General</option><option selected>Private</option><option>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option selected>Available</option><option>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>103 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-3">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 201</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option>General</option><option>Private</option><option selected>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option>Available</option><option selected>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-3">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>201 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-4">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 202</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option>General</option><option>Private</option><option selected>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option selected>Available</option><option>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-4">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>202 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-room-5">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit 301</h2>
+    <form action="#saved">
+<label class="field">Type <select required><option>General</option><option selected>Private</option><option>ICU</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option selected>Available</option><option>Occupied</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-room-5">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this room?</h2>
+    <p>301 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="toast c-green" id="deleted" role="status"><strong>Delete confirmed</strong><span>The record list has not changed.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

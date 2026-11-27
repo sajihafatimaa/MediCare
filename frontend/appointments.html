@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appointments | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue active" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Appointments</h1><p>Patient Care / Appointments</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="split">
+      <div class="card">
+        <h2>Book an appointment</h2>
+        <form action="#booked">
+<label class="field">Patient <select required><option selected>Ayesha Khan</option><option>Daniyal Butt</option><option>Maryam Iqbal</option><option>Omar Farooq</option><option>Sadia Tariq</option><option>Hamza Sheikh</option><option>Hina Ali</option><option>Naveed Akhtar</option><option>Emaan Fatima</option><option>Yousaf Khan</option><option>Rabia Nawaz</option><option>Faisal Mehmood</option><option>Mahnoor Javed</option><option>Ahmed Raza</option><option>Nasreen Bibi</option><option>Talha Aslam</option><option>Fatima Noor</option><option>Kamran Shah</option><option>Areeba Hassan</option><option>Shahid Latif</option><option>Nimra Zafar</option><option>Waqas Anjum</option><option>Zara Sheikh</option><option>Tahir Abbas</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Doctor <select required><option selected>Dr. Imran Qureshi</option><option>Dr. Farah Siddiqui</option><option>Dr. Bilal Ahmed</option><option>Dr. Sana Malik</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Date <input type="date" value="2026-12-02" required min="2026-11-27"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Time <input type="time" value="09:00" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+          <button class="btn btn-block" type="submit">Book appointment</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>All appointments</h2>
+        <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+          <tbody>
+          <tr><td class="id">AP-1001</td><td>Ayesha Khan</td><td>Dr. Imran Qureshi</td><td>11-27</td><td>09:00</td><td><a href="#status-AP-1001" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1002</td><td>Daniyal Butt</td><td>Dr. Farah Siddiqui</td><td>11-27</td><td>09:30</td><td><a href="#status-AP-1002" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1003</td><td>Maryam Iqbal</td><td>Dr. Bilal Ahmed</td><td>11-26</td><td>11:00</td><td><a href="#status-AP-1003" title="Change status"><span class="pill c-green">Completed</span></a></td></tr>
+          <tr><td class="id">AP-1004</td><td>Omar Farooq</td><td>Dr. Imran Qureshi</td><td>11-26</td><td>14:15</td><td><a href="#status-AP-1004" title="Change status"><span class="pill c-green">Completed</span></a></td></tr>
+          <tr><td class="id">AP-1005</td><td>Sadia Tariq</td><td>Dr. Farah Siddiqui</td><td>11-25</td><td>10:45</td><td><a href="#status-AP-1005" title="Change status"><span class="pill c-red">Cancelled</span></a></td></tr>
+          <tr><td class="id">AP-1006</td><td>Hamza Sheikh</td><td>Dr. Bilal Ahmed</td><td>11-25</td><td>16:00</td><td><a href="#status-AP-1006" title="Change status"><span class="pill c-green">Completed</span></a></td></tr>
+          <tr><td class="id">AP-1007</td><td>Hina Ali</td><td>Dr. Imran Qureshi</td><td>11-28</td><td>08:30</td><td><a href="#status-AP-1007" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1008</td><td>Naveed Akhtar</td><td>Dr. Sana Malik</td><td>11-26</td><td>12:00</td><td><a href="#status-AP-1008" title="Change status"><span class="pill c-green">Completed</span></a></td></tr>
+          <tr><td class="id">AP-1009</td><td>Emaan Fatima</td><td>Dr. Bilal Ahmed</td><td>11-28</td><td>10:00</td><td><a href="#status-AP-1009" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1010</td><td>Yousaf Khan</td><td>Dr. Sana Malik</td><td>11-30</td><td>15:00</td><td><a href="#status-AP-1010" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1011</td><td>Rabia Nawaz</td><td>Dr. Sana Malik</td><td>11-30</td><td>15:30</td><td><a href="#status-AP-1011" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          <tr><td class="id">AP-1012</td><td>Faisal Mehmood</td><td>Dr. Farah Siddiqui</td><td>12-01</td><td>11:15</td><td><a href="#status-AP-1012" title="Change status"><span class="pill c-blue">Scheduled</span></a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+<div class="modal c-blue" id="status-AP-1001">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1001</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1002">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1002</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1003">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1003</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option>Scheduled</option><option selected>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1004">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1004</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option>Scheduled</option><option selected>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1005">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1005</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option>Scheduled</option><option>Completed</option><option selected>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1006">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1006</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option>Scheduled</option><option selected>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1007">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1007</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1008">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1008</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option>Scheduled</option><option selected>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1009">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1009</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1010">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1010</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1011">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1011</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="status-AP-1012">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Change status of AP-1012</h2>
+    <form action="#saved">
+<label class="field">Status <select required><option selected>Scheduled</option><option>Completed</option><option>Cancelled</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="toast c-green" id="booked" role="status"><strong>Details complete</strong><span>The appointment list has not changed.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>
