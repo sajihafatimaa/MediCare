@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Bilal Ahmed | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal active" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Dr. Bilal Ahmed</h1><p>Clinical / Doctor Panels / Pediatrics</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="cards">
+<div class="card metric c-blue"><span>All appointments</span><strong>3</strong></div>
+<div class="card metric c-teal"><span>Scheduled</span><strong>1</strong></div>
+<div class="card metric c-green"><span>Completed</span><strong>2</strong></div>
+<div class="card metric c-purple"><span>My patients</span><strong>3</strong></div>
+</div>
+    <div class="card"><h2>Appointments</h2>
+      <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>ID</th><th>Patient</th><th>Date</th><th>Time</th><th>Reason</th><th>Status</th></tr></thead>
+          <tbody>
+          <tr><td class="id">AP-1006</td><td><a href="doctor-bilal.html#P-1006">Hamza Sheikh</a></td><td>2026-11-25</td><td>16:00</td><td>Chest infection</td><td><span class="pill c-green">Completed</span></td></tr>
+          <tr><td class="id">AP-1003</td><td><a href="doctor-bilal.html#P-1003">Maryam Iqbal</a></td><td>2026-11-26</td><td>11:00</td><td>Fever and cough</td><td><span class="pill c-green">Completed</span></td></tr>
+          <tr><td class="id">AP-1009</td><td><a href="doctor-bilal.html#P-1009">Emaan Fatima</a></td><td>2026-11-28</td><td>10:00</td><td>Vaccination visit</td><td><span class="pill c-blue">Scheduled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="head"><h2>Patient details</h2></div>
+    <div class="records">
+      <article class="card record" id="P-1003">
+        <h3>Maryam Iqbal <span class="pill c-blue">P-1003</span></h3>
+        <dl>
+          <dt>Age / Gender</dt><dd>9 / Female</dd>
+          <dt>Blood group</dt><dd>A+</dd>
+          <dt>Phone</dt><dd>+92 300 0000103</dd>
+          <dt>Address</dt><dd>House 7, Johar Town, Lahore</dd>
+          <dt>Reason</dt><dd>Fever and cough</dd>
+          <dt>Admission</dt><dd>None</dd>
+        </dl>
+        <ul><li>AP-1003: 2026-11-26 at 11:00 (Completed)</li></ul>
+      </article>
+      <article class="card record" id="P-1006">
+        <h3>Hamza Sheikh <span class="pill c-blue">P-1006</span></h3>
+        <dl>
+          <dt>Age / Gender</dt><dd>7 / Male</dd>
+          <dt>Blood group</dt><dd>B+</dd>
+          <dt>Phone</dt><dd>+92 300 0000106</dd>
+          <dt>Address</dt><dd>House 5, Gulshan-e-Iqbal, Karachi</dd>
+          <dt>Reason</dt><dd>Chest infection</dd>
+          <dt>Admission</dt><dd>A-2103, room 103, 2026-11-20 to 2026-11-24</dd>
+        </dl>
+        <ul><li>AP-1006: 2026-11-25 at 16:00 (Completed)</li></ul>
+      </article>
+      <article class="card record" id="P-1009">
+        <h3>Emaan Fatima <span class="pill c-blue">P-1009</span></h3>
+        <dl>
+          <dt>Age / Gender</dt><dd>5 / Female</dd>
+          <dt>Blood group</dt><dd>B-</dd>
+          <dt>Phone</dt><dd>+92 300 0000109</dd>
+          <dt>Address</dt><dd>House 4, Satellite Town, Rawalpindi</dd>
+          <dt>Reason</dt><dd>Vaccination visit</dd>
+          <dt>Admission</dt><dd>None</dd>
+        </dl>
+        <ul><li>AP-1009: 2026-11-28 at 10:00 (Scheduled)</li></ul>
+      </article>
+    </div>
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nurses | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal active" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Nurses</h1><p>Clinical / Nurses</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="head end c-teal"><a class="btn" href="#add-nurse">+ Add Nurse</a></div>
+    <div class="card">
+      <div class="table-wrap c-teal">
+        <table>
+          <thead><tr><th>Nurse_ID</th><th>Name</th><th>Phone</th><th>Gender</th><th>Salary</th><th>Actions</th></tr></thead>
+          <tbody>
+          <tr><td class="id">N-01</td><td>N. Parveen</td><td>+92 300 0000301</td><td>Female</td><td>Rs 85,000</td><td><a class="act" href="#edit-nurse-0" data-tip="Edit nurse">Edit</a><a class="act del" href="#del-nurse-0" data-tip="Delete nurse">Delete</a></td></tr>
+          <tr><td class="id">N-02</td><td>R. Kausar</td><td>+92 300 0000302</td><td>Female</td><td>Rs 80,000</td><td><a class="act" href="#edit-nurse-1" data-tip="Edit nurse">Edit</a><a class="act del" href="#del-nurse-1" data-tip="Delete nurse">Delete</a></td></tr>
+          <tr><td class="id">N-03</td><td>A. Mahmood</td><td>+92 300 0000303</td><td>Male</td><td>Rs 82,000</td><td><a class="act" href="#edit-nurse-2" data-tip="Edit nurse">Edit</a><a class="act del" href="#del-nurse-2" data-tip="Delete nurse">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="modal c-teal" id="add-nurse">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Add nurse</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option value="">Choose...</option><option>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Salary <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-nurse-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit N-01</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="N. Parveen" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="text" value="+92 300 0000301" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Salary <input type="text" value="Rs 85,000" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-nurse-0">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this nurse?</h2>
+    <p>N-01 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-nurse-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit N-02</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="R. Kausar" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="text" value="+92 300 0000302" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Salary <input type="text" value="Rs 80,000" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-nurse-1">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this nurse?</h2>
+    <p>N-02 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-teal" id="edit-nurse-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit N-03</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="A. Mahmood" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="text" value="+92 300 0000303" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Salary <input type="text" value="Rs 82,000" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-nurse-2">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this nurse?</h2>
+    <p>N-03 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="toast c-green" id="deleted" role="status"><strong>Delete confirmed</strong><span>The record list has not changed.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

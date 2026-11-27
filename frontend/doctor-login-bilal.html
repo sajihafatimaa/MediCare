@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Bilal Ahmed login | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div class="login-page">
+  <div class="brand">
+    <span class="circle one"></span><span class="circle two"></span>
+    <a class="logo" href="../index.html"><img src="../images/logo.svg" alt="">MediCare</a>
+    <div>
+      <h1>Care, organised.</h1>
+      <p>Sign in to manage the whole hospital from one calm, simple workspace.</p>
+      <ul>
+        <li class="c-blue">Patients, appointments and rooms</li>
+        <li class="c-teal">Doctors, prescriptions and medicines</li>
+        <li class="c-orange">Bills, payments and cashiers</li>
+        <li class="c-purple">Staff and administrators</li>
+      </ul>
+    </div>
+    <a class="back" href="../index.html">&lsaquo; Back to home</a>
+  </div>
+
+  <div class="side">
+    <form class="card login-card" action="../doctor/bilal.html">
+      <h2>Dr. Bilal Ahmed</h2>
+      <p class="sub">Pediatrician - sign in to your doctor panel</p>
+
+      <label class="field">Username
+        <input type="text" placeholder="dr.bilal" required autocomplete="off">
+        <span class="error-text">Enter your username</span>
+      </label>
+
+      <div class="field password">
+        <label class="field" for="password">Password</label>
+        <span class="password">
+          <input class="secret" id="password" type="text" required autocomplete="off" spellcheck="false">
+          <input type="checkbox" id="show" aria-label="Show password">
+          <label class="eye" for="show" title="Show or hide password"><img src="../images/eye.svg" alt=""></label>
+        </span>
+      </div>
+
+      <div class="row">
+        <label><input type="checkbox" checked> Remember me</label>
+        <a href="#forgot"><b>Forgot password?</b></a>
+      </div>
+      <p class="forgot" id="forgot">Please contact your hospital administrator to reset your password.</p>
+
+      <button class="btn btn-block" type="submit">Sign in</button>
+
+      <div class="secure"><p><a href="doctor-login.html"><b>&lsaquo; Choose another doctor</b></a></p></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

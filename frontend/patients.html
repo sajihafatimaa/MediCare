@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patients | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue active" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Patients</h1><p>Patient Care / Patients</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="patients">
+    <div class="toolbar">
+      <input type="search" placeholder="Search by name or ID" aria-label="Search by name or ID">
+      <select aria-label="Gender filter"><option value="All">All genders</option><option value="Female">Female</option><option value="Male">Male</option></select>
+      <a class="btn" href="#add-patient">+ Add Patient</a>
+    </div>
+    <div class="card">
+<input type="radio" name="pg" class="pager-radio" id="p1" checked aria-label="Page 1">
+<input type="radio" name="pg" class="pager-radio" id="p2" aria-label="Page 2">
+<input type="radio" name="pg" class="pager-radio" id="p3" aria-label="Page 3">
+      <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>Patient_ID</th><th>Name &#9660;</th><th>Age</th><th>Gender</th><th>Phone</th><th>Address</th><th>Actions</th></tr></thead>
+          <tbody class="pg pg1">
+            <tr class="female"><td class="id">P-1001</td><td>Ayesha Khan</td><td>34</td><td>Female</td><td>+92 300 0000101</td><td>House 12, Gulberg, Lahore</td><td><a class="act" href="#edit-P-1001" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1001" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1002</td><td>Daniyal Butt</td><td>52</td><td>Male</td><td>+92 300 0000102</td><td>House 48, Model Town, Lahore</td><td><a class="act" href="#edit-P-1002" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1002" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1003</td><td>Maryam Iqbal</td><td>9</td><td>Female</td><td>+92 300 0000103</td><td>House 7, Johar Town, Lahore</td><td><a class="act" href="#edit-P-1003" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1003" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1004</td><td>Omar Farooq</td><td>41</td><td>Male</td><td>+92 300 0000104</td><td>House 90, DHA Phase 4, Lahore</td><td><a class="act" href="#edit-P-1004" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1004" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1005</td><td>Sadia Tariq</td><td>63</td><td>Female</td><td>+92 300 0000105</td><td>House 21, Clifton, Karachi</td><td><a class="act" href="#edit-P-1005" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1005" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1006</td><td>Hamza Sheikh</td><td>7</td><td>Male</td><td>+92 300 0000106</td><td>House 5, Gulshan-e-Iqbal, Karachi</td><td><a class="act" href="#edit-P-1006" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1006" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1007</td><td>Hina Ali</td><td>38</td><td>Female</td><td>+92 300 0000107</td><td>House 33, F-8, Islamabad</td><td><a class="act" href="#edit-P-1007" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1007" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1008</td><td>Naveed Akhtar</td><td>72</td><td>Male</td><td>+92 300 0000108</td><td>House 16, G-9, Islamabad</td><td><a class="act" href="#edit-P-1008" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1008" data-tip="Delete patient">Delete</a></td></tr>
+          </tbody>
+          <tbody class="pg pg2">
+            <tr class="female"><td class="id">P-1009</td><td>Emaan Fatima</td><td>5</td><td>Female</td><td>+92 300 0000109</td><td>House 4, Satellite Town, Rawalpindi</td><td><a class="act" href="#edit-P-1009" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1009" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1010</td><td>Yousaf Khan</td><td>47</td><td>Male</td><td>+92 300 0000110</td><td>House 62, Hayatabad, Peshawar</td><td><a class="act" href="#edit-P-1010" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1010" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1011</td><td>Rabia Nawaz</td><td>33</td><td>Female</td><td>+92 300 0000111</td><td>House 18, Peoples Colony, Faisalabad</td><td><a class="act" href="#edit-P-1011" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1011" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1012</td><td>Faisal Mehmood</td><td>56</td><td>Male</td><td>+92 300 0000112</td><td>House 27, Cantt, Multan</td><td><a class="act" href="#edit-P-1012" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1012" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1013</td><td>Mahnoor Javed</td><td>22</td><td>Female</td><td>+92 300 0000113</td><td>House 9, Samanabad, Lahore</td><td><a class="act" href="#edit-P-1013" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1013" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1014</td><td>Ahmed Raza</td><td>44</td><td>Male</td><td>+92 300 0000114</td><td>House 71, North Nazimabad, Karachi</td><td><a class="act" href="#edit-P-1014" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1014" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1015</td><td>Nasreen Bibi</td><td>68</td><td>Female</td><td>+92 300 0000115</td><td>House 3, Civil Lines, Sialkot</td><td><a class="act" href="#edit-P-1015" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1015" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1016</td><td>Talha Aslam</td><td>31</td><td>Male</td><td>+92 300 0000116</td><td>House 55, Wapda Town, Gujranwala</td><td><a class="act" href="#edit-P-1016" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1016" data-tip="Delete patient">Delete</a></td></tr>
+          </tbody>
+          <tbody class="pg pg3">
+            <tr class="female"><td class="id">P-1017</td><td>Fatima Noor</td><td>50</td><td>Female</td><td>+92 300 0000117</td><td>House 14, Bahria Town, Rawalpindi</td><td><a class="act" href="#edit-P-1017" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1017" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1018</td><td>Kamran Shah</td><td>36</td><td>Male</td><td>+92 300 0000118</td><td>House 82, Latifabad, Hyderabad</td><td><a class="act" href="#edit-P-1018" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1018" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1019</td><td>Areeba Hassan</td><td>25</td><td>Female</td><td>+92 300 0000119</td><td>House 6, Askari 10, Lahore</td><td><a class="act" href="#edit-P-1019" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1019" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1020</td><td>Shahid Latif</td><td>61</td><td>Male</td><td>+92 300 0000120</td><td>House 40, Saddar, Karachi</td><td><a class="act" href="#edit-P-1020" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1020" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1021</td><td>Nimra Zafar</td><td>39</td><td>Female</td><td>+92 300 0000121</td><td>House 23, I-8, Islamabad</td><td><a class="act" href="#edit-P-1021" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1021" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1022</td><td>Waqas Anjum</td><td>58</td><td>Male</td><td>+92 300 0000122</td><td>House 11, Jinnah Town, Quetta</td><td><a class="act" href="#edit-P-1022" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1022" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="female"><td class="id">P-1023</td><td>Zara Sheikh</td><td>30</td><td>Female</td><td>+92 300 0000123</td><td>House 38, Iqbal Town, Lahore</td><td><a class="act" href="#edit-P-1023" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1023" data-tip="Delete patient">Delete</a></td></tr>
+            <tr class="male"><td class="id">P-1024</td><td>Tahir Abbas</td><td>45</td><td>Male</td><td>+92 300 0000124</td><td>House 19, Model Town, Bahawalpur</td><td><a class="act" href="#edit-P-1024" data-tip="Edit patient">Edit</a><a class="act del" href="#del-P-1024" data-tip="Delete patient">Delete</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <div><span class="range r1">Showing 1-8</span><span class="range r2">Showing 9-16</span><span class="range r3">Showing 17-24</span> of 1,284 patients</div>
+        <div class="pages"><label class="l1" for="p1">1</label><label class="l2" for="p2">2</label><label class="l3" for="p3">3</label><label class="next n1" for="p2" title="Next page">&rsaquo;</label><label class="next n2" for="p3" title="Next page">&rsaquo;</label><label class="next n3" for="p1" title="Back to page 1">&rsaquo;</label></div>
+      </div>
+    </div>
+    </div>
+<div class="modal c-blue" id="edit-P-1001">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1001</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Ayesha Khan" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="34" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000101" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 12, Gulberg, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1001">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1001 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1002">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1002</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Daniyal Butt" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="52" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000102" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 48, Model Town, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1002">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1002 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1003">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1003</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Maryam Iqbal" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="9" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000103" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 7, Johar Town, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1003">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1003 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1004">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1004</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Omar Farooq" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="41" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000104" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 90, DHA Phase 4, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1004">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1004 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1005">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1005</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Sadia Tariq" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="63" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000105" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 21, Clifton, Karachi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1005">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1005 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1006">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1006</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Hamza Sheikh" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="7" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000106" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 5, Gulshan-e-Iqbal, Karachi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1006">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1006 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1007">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1007</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Hina Ali" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="38" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000107" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 33, F-8, Islamabad" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1007">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1007 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1008">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1008</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Naveed Akhtar" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="72" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000108" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 16, G-9, Islamabad" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1008">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1008 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1009">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1009</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Emaan Fatima" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="5" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000109" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 4, Satellite Town, Rawalpindi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1009">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1009 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1010">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1010</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Yousaf Khan" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="47" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000110" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 62, Hayatabad, Peshawar" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1010">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1010 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1011">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1011</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Rabia Nawaz" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="33" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000111" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 18, Peoples Colony, Faisalabad" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1011">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1011 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1012">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1012</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Faisal Mehmood" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="56" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000112" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 27, Cantt, Multan" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1012">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1012 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#refused">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1013">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1013</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Mahnoor Javed" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="22" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000113" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 9, Samanabad, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1013">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1013 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1014">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1014</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Ahmed Raza" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="44" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000114" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 71, North Nazimabad, Karachi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1014">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1014 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1015">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1015</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Nasreen Bibi" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="68" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000115" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 3, Civil Lines, Sialkot" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1015">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1015 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1016">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1016</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Talha Aslam" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="31" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000116" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 55, Wapda Town, Gujranwala" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1016">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1016 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1017">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1017</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Fatima Noor" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="50" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000117" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 14, Bahria Town, Rawalpindi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1017">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1017 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1018">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1018</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Kamran Shah" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="36" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000118" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 82, Latifabad, Hyderabad" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1018">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1018 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1019">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1019</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Areeba Hassan" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="25" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000119" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 6, Askari 10, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1019">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1019 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1020">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1020</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Shahid Latif" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="61" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000120" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 40, Saddar, Karachi" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1020">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1020 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1021">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1021</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Nimra Zafar" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="39" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000121" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 23, I-8, Islamabad" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1021">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1021 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1022">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1022</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Waqas Anjum" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="58" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000122" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 11, Jinnah Town, Quetta" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1022">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1022 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1023">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1023</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Zara Sheikh" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="30" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option selected>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000123" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 38, Iqbal Town, Lahore" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1023">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1023 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="edit-P-1024">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Edit P-1024</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" value="Tahir Abbas" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" value="45" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option>Female</option><option selected>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" value="+92 300 0000124" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" value="House 19, Model Town, Bahawalpur" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="del-P-1024">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box confirm">
+    <div class="warn-icon">!</div>
+    <h2>Delete this patient?</h2>
+    <p>P-1024 will be removed. This cannot be undone.</p>
+    <div class="modal-actions">
+      <a class="btn btn-light" href="#_">Cancel</a>
+      <a class="btn btn-danger" href="#deleted">Delete</a>
+    </div>
+  </div>
+</div>
+<div class="modal c-blue" id="add-patient">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Add patient</h2>
+    <form action="#saved">
+<label class="field">Name <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Age <input type="number" required min="0" max="120"><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Gender <select required><option value="">Choose...</option><option>Female</option><option>Male</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Phone <input type="tel" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Address <input type="text" required><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Registered by <select required><option selected>Sara Ahmed</option><option>Usman Chaudhry</option></select><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="toast c-green" id="deleted" role="status"><strong>Delete confirmed</strong><span>The record list has not changed.</span></div>
+<div class="toast c-red" id="refused" role="status"><strong>Delete refused</strong><span>This patient has appointments, admissions or bills.</span></div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>

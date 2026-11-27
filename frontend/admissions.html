@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admissions &amp; Rooms | MediCare</title>
+  <link rel="icon" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+<div class="portal">
+  <input type="checkbox" class="menu-check" id="menu">
+  <label class="menu-button" for="menu">&#9776; Menu</label>
+
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html"><img src="../images/logo.svg" alt=""><span>MediCare<small>Hospital Management</small></span></a>
+    <nav>
+      <a class="" href="dashboard.html">Dashboard</a>
+      <h4 class="c-blue">Patient Care</h4>
+      <a class="c-blue" href="patients.html">Patients</a>
+      <a class="c-blue" href="appointments.html">Appointments<span class="count">7</span></a>
+      <a class="c-blue active" href="admissions.html">Admissions<span class="count">2</span></a>
+      <a class="c-blue" href="rooms.html">Rooms</a>
+      <h4 class="c-teal">Clinical</h4>
+      <a class="c-teal" href="doctors.html">Doctors</a>
+      <a class="c-teal" href="doctor-panels.html">Doctor Panels</a>
+      <a class="c-teal" href="nurses.html">Nurses</a>
+      <a class="c-teal" href="departments.html">Departments</a>
+      <a class="c-teal" href="prescriptions.html">Prescriptions</a>
+      <a class="c-teal" href="medicines.html">Medicines</a>
+      <h4 class="c-orange">Billing</h4>
+      <a class="c-orange" href="bills.html">Bills<span class="count">2</span></a>
+      <a class="c-orange" href="payments.html">Payments</a>
+      <a class="c-orange" href="cashiers.html">Cashiers</a>
+      <h4 class="c-purple">Staff &amp; Admin</h4>
+      <a class="c-purple" href="staff.html">Staff</a>
+      <a class="c-purple" href="admins.html">Admins</a>
+    </nav>
+    <div class="side-foot">
+      <p><span class="dot"></span>All systems online</p>
+      <a href="help.html">Help &amp; support</a>
+      <a href="../index.html">Log out</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="title"><h1>Admissions &amp; Rooms</h1><p>Patient Care / Admissions</p></div>
+      <div class="search">
+        <input type="search" placeholder="Search patients, doctors, bills..." aria-label="Search" accesskey="k">
+        <kbd>Ctrl K</kbd>
+        <div class="dropdown">
+          <a href="patients.html">Ayesha Khan - P-1001</a>
+          <a href="doctors.html">Dr. Imran Qureshi - Cardiology</a>
+          <a href="bills.html">B-501 - Daniyal Butt</a>
+        </div>
+      </div>
+      <div class="bell">
+        <button type="button" aria-label="3 alerts"><img src="../images/bell.svg" alt=""><span>3</span></button>
+        <div class="dropdown">
+          <a href="medicines.html">Low stock: Ibuprofen (55)</a>
+          <a href="medicines.html">Expiry soon: Ibuprofen, 2027-03</a>
+          <a href="payments.html">Pending payment: B-502</a>
+        </div>
+      </div>
+      <div class="user"><div class="avatar">SA</div><div><strong>Sara Ahmed</strong>Administrator</div></div>
+    </header>
+
+    <div class="content">
+<div class="head"><h2>Rooms</h2></div>
+    <div class="rooms">
+      <div class="card"><h3>Room 101</h3><p>General</p><span class="pill c-red">Occupied</span></div>
+      <div class="card"><h3>Room 102</h3><p>General</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 103</h3><p>Private</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 201</h3><p>ICU</p><span class="pill c-red">Occupied</span></div>
+      <div class="card"><h3>Room 202</h3><p>ICU</p><span class="pill c-green">Available</span></div>
+      <div class="card"><h3>Room 301</h3><p>Private</p><span class="pill c-green">Available</span></div>
+    </div>
+    <div class="head"><h2>Admissions</h2><a class="btn" href="#new-admission">+ New Admission</a></div>
+    <div class="card">
+      <div class="table-wrap c-blue">
+        <table>
+          <thead><tr><th>Admission_ID</th><th>Patient</th><th>Doctor</th><th>Nurse</th><th>Room</th><th>Admitted</th><th>Discharged</th></tr></thead>
+          <tbody>
+          <tr><td class="id">A-2101</td><td>Daniyal Butt</td><td>Dr. Farah Siddiqui</td><td>N. Parveen</td><td>101</td><td>2026-11-25</td><td>-- &nbsp; <a class="act" href="#dis-A-2101">Discharge</a></td></tr>
+          <tr><td class="id">A-2102</td><td>Sadia Tariq</td><td>Dr. Imran Qureshi</td><td>R. Kausar</td><td>201</td><td>2026-11-26</td><td>-- &nbsp; <a class="act" href="#dis-A-2102">Discharge</a></td></tr>
+          <tr><td class="id">A-2103</td><td>Hamza Sheikh</td><td>Dr. Bilal Ahmed</td><td>N. Parveen</td><td>103</td><td>2026-11-20</td><td>2026-11-24</td></tr>
+          <tr><td class="id">A-2104</td><td>Naveed Akhtar</td><td>Dr. Sana Malik</td><td>A. Mahmood</td><td>201</td><td>2026-11-18</td><td>2026-11-23</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="modal c-blue" id="new-admission">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>New admission</h2>
+    <form action="#saved">
+<label class="field">Patient <select required><option value="">Choose...</option><option>Ayesha Khan</option><option>Daniyal Butt</option><option>Maryam Iqbal</option><option>Omar Farooq</option><option>Sadia Tariq</option><option>Hamza Sheikh</option><option>Hina Ali</option><option>Naveed Akhtar</option><option>Emaan Fatima</option><option>Yousaf Khan</option><option>Rabia Nawaz</option><option>Faisal Mehmood</option><option>Mahnoor Javed</option><option>Ahmed Raza</option><option>Nasreen Bibi</option><option>Talha Aslam</option><option>Fatima Noor</option><option>Kamran Shah</option><option>Areeba Hassan</option><option>Shahid Latif</option><option>Nimra Zafar</option><option>Waqas Anjum</option><option>Zara Sheikh</option><option>Tahir Abbas</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Doctor <select required><option value="">Choose...</option><option>Dr. Imran Qureshi</option><option>Dr. Farah Siddiqui</option><option>Dr. Bilal Ahmed</option><option>Dr. Sana Malik</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Nurse <select required><option value="">Choose...</option><option>N. Parveen</option><option>R. Kausar</option><option>A. Mahmood</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Available room <select required><option value="">Choose...</option><option>102</option><option>103</option><option>202</option><option>301</option></select><span class="error-text">Please fill in this field correctly</span></label>
+<label class="field">Admission date <input type="date" value="2026-11-27" required><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="toast c-green" id="saved" role="status"><strong>Form checked</strong><span>All fields are filled in correctly.</span></div>
+<div class="modal c-blue" id="dis-A-2101">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Discharge Daniyal Butt</h2>
+    <form action="#saved">
+<label class="field">Discharge date <input type="date" value="2026-11-27" required min="2026-11-25"><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Discharge</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal c-blue" id="dis-A-2102">
+  <a class="modal-bg" href="#_" aria-label="Close"></a>
+  <div class="modal-box">
+    <h2>Discharge Sadia Tariq</h2>
+    <form action="#saved">
+<label class="field">Discharge date <input type="date" value="2026-11-27" required min="2026-11-26"><span class="error-text">Please fill in this field correctly</span></label>
+      <div class="modal-actions">
+        <a class="btn btn-light" href="#_">Cancel</a>
+        <button class="btn" type="submit">Discharge</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    </div>
+    <p class="synced">MediCare v1.0 &nbsp;|&nbsp; Data synced 10:42 </p>
+  </main>
+</div>
+</body>
+</html>
